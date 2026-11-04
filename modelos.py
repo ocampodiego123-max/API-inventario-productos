@@ -17,8 +17,7 @@ class Producto(Base):
 
     __table_args__ = (CheckConstraint('stock >= 0'), CheckConstraint('precio > 0'))
 
-    compras: Mapped[list["Compra"]] = relationship("Compra", back_populates="producto")
-    
+    compras: Mapped[list["Compra"]] = relationship("Compra", back_populates="producto")    
 
 
 
@@ -31,7 +30,6 @@ class Compra(Base):
     total: Mapped[Decimal] = mapped_column(Numeric(10,2), nullable=False)
 
     producto: Mapped["Producto"] = relationship("Producto", back_populates="compras")
-
 
 
 
