@@ -51,3 +51,54 @@ API Productos/
 - **requirements.txt**: contiene las dependencias del proyecto.
 - **.env.example**: plantilla de las variables de entorno necesarias para ejecutar el proyecto.
 - **.gitignore**: especifica los archivos y carpetas excluidos del control de versiones.
+
+
+## Instalación y ejecución
+
+### 1. Clonar el repositorio
+
+```bash
+git clone URL_DEL_REPOSITORIO
+cd "API Productos"
+```
+
+### 2. Crear y activar el entorno virtual
+
+En Windows, utilizando PowerShell:
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+### 3. Instalar las dependencias
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configurar las variables de entorno
+
+Crear un archivo `.env` en la raíz del proyecto, tomando como referencia `.env.example`.
+
+Completar las variables requeridas:
+
+```env
+DATABASE_URL=
+SECRET_KEY=
+```
+
+### 5. Ejecutar la aplicación
+
+```bash
+python -m uvicorn main:app --reload
+```
+
+### 6. Acceder a la documentación interactiva
+
+Con el servidor en ejecución, abrir:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
