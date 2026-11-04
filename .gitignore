@@ -1,0 +1,25 @@
+#Entorno virtual
+.venv/
+venv/
+
+#archivos python
+__pycache__/
+_pycache_
+*.py[cod]
+*.pyc
+
+#variables de entorno
+.env
+
+rutas/_pycache_
+rutas/_pycache_/
+
+.vscode
+
+# Archivos de entorno adicionales
+.env.*
+!.env.example
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
